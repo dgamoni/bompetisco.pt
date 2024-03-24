@@ -1,0 +1,51 @@
+.iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.current-menu-ancestor>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.current-menu-item>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.highlight_style>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.highlight_style>.item_link:hover, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li:hover>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link span.description_text, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link:hover{
+font-weight: 600;
+font-size: medium;    
+}
+
+.single-post .entry-author-meta {display:none;}
+
+.single-post .entry-title{
+     font-weight: bold;
+}
+
+
+table>tbody>tr>td{
+  border: none;
+  background:transparent;
+}
+
+a.jm-post-like{
+        display: none;
+}
+
+.ivan-tabs-wrap .vc_tta.vc_tta-style-flat-boxed 
+.vc_tta-tab.vc_active>a, .ivan-tabs-wrap 
+.vc_tta.vc_tta-style-flat-boxed .vc_tta-tab>a:hover{
+        background-color: #1e73be; 
+            border-color: #1e73be; 
+}
+
+
+
+.ivan-tabs-wrap .vc_tta.vc_tta-style-flat-boxed.vc_tta-gap-0.vc_tta-shape-square .vc_tta-panels-container{
+    border-top: 2px solid #1e73be; 
+}
+
+.ivan-tabs-wrap .vc_tta.vc_tta-style-flat-boxed .vc_tta-tab.vc_active>a, 
+.ivan-tabs-wrap .vc_tta.vc_tta-style-flat-boxed .vc_tta-tab>a:hover{
+    font-weight: bold;
+}
+
+.logo img{
+        margin-top: -27px;
+}
+
+.iv-layout.footer{
+    background-color: #1e73be; 
+    max-height: 230px;
+}
+
+.ivan-vc-filters .filter-grid{
+  display: none;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ivan-kocka",
+  "title": "Ivan Kocka",
+  "description": "The perfect tool to build themes!",
+  "version": "1.1.5",
+  "homepage": "http://code9rs.com",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "git-apply": "rm -rf ./.git/rebase-apply && git am changes.patch --reject"  
+  },
+  "author": {
+    "name": "CODE9RS",
+    "email": "contact@code9rs.com",
+    "url": ""
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "glob": "~5.0.15",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-phpunit": "^0.3.6",
+    "grunt-postcss": "^0.6.0",
+    "grunt-contrib-less": "^1.0.0",
+    "load-grunt-config": "~0.17.2",
+    "load-grunt-tasks": "^3.3.0",
+    "postcss-flexibility": "^1.0.3",
+    "qunitjs": "~1.18.0"
+  },
+  "keywords": [],
+  "dependencies": {}
+}

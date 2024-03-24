@@ -1,0 +1,4 @@
+[25-Oct-2016 05:21:38 Europe/Lisbon] PHP Fatal error:  Call to undefined function get_header() in /home/bompetis/public_html/wp-content/themes/ivan-kocka/404.php on line 8
+[26-Oct-2016 13:41:38 Europe/Lisbon] PHP Fatal error:  Call to undefined function get_header() in /home/bompetis/public_html/wp-content/themes/ivan-kocka/404.php on line 8
+[27-Oct-2016 07:05:02 Europe/Lisbon] PHP Fatal error:  Call to undefined function get_header() in /home/bompetis/public_html/wp-content/themes/ivan-kocka/404.php on line 8
+[27-Oct-2016 17:47:56 Europe/Lisbon] PHP Fatal error:  Call to undefined function get_header() in /home/bompetis/public_html/wp-content/themes/ivan-kocka/404.php on line 8

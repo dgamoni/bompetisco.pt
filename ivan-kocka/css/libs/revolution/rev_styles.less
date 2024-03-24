@@ -1,0 +1,1154 @@
+// Import Vars and Mixins
+
+@import '../../less/bootstrap/_variables.less'; // ( !IMPORTANT: file usually modified by developers )
+@import '../../less/bootstrap/_mixins.less';
+@import '../../less/bootstrap/_lesshat-prefixed.less';
+@import '../../less/shortcodes/_variables.less';
+
+.iv_btn_social_auto( @bg ) {
+	background-color: @bg;
+	color: #fff;
+	border-color: @bg;
+
+	hr {
+		background-color: #fff;
+	}
+
+	&:hover {
+		background-color: darken(@bg, 10%);
+		border-color: darken(@bg, 10%);
+		color: #fff;
+
+		hr {
+			background-color: #fff;
+		}
+	}
+}
+
+.tp-caption {
+	.ivan-button {
+		margin: 5px 0 !important;
+	}
+}
+
+
+// Paste Dual Button and Button Styles Below...
+
+/***
+ *
+ * Module > Dual Button
+ *
+***/
+
+.ivan-dual-button {
+	&.to-left {
+		text-align: left;
+	}
+	&.to-right {
+		text-align: right;
+	}
+	&.to-center {
+		text-align: center;
+	}
+
+	position: relative;
+
+	.buttons .ivan-button-wrapper {
+		margin: 0;
+		position: relative;
+
+		&:first-child {
+
+			.ivan-button {
+				border-top-right-radius: 0px !important;
+				border-bottom-right-radius: 0px !important;
+			}
+		}
+
+		&:last-child {
+
+			.ivan-button {
+				border-top-left-radius: 0px !important;
+				border-bottom-left-radius: 0px !important;
+				
+			}
+		}
+	}
+
+	// Large Border
+	&.large-borders {
+		.buttons .ivan-button-wrapper {
+			&:first-child {
+
+				.ivan-button {
+					border-width: 4px;
+					border-right-width: 1px;
+				}
+			}
+
+			&:last-child {
+
+				.ivan-button {
+					border-width: 4px;
+					border-left-width: 1px;
+				}
+			}
+		}
+	}
+
+	// Auto Border
+	&.auto-borders {
+		.buttons .ivan-button-wrapper {
+			&:first-child {
+
+				.ivan-button {
+					border-right-width: 1px;
+				}
+			}
+
+			&:last-child {
+
+				.ivan-button {
+					border-left-width: 0px; // this is 0 because button has 1 of border by default
+				}
+			}
+		}
+	}
+
+	// Thin Borders
+	&.thin-borders {
+		.buttons .ivan-button-wrapper {
+			&:first-child {
+
+				.ivan-button {
+					border-width: 1px;
+					border-right-width: 1px;
+				}
+			}
+
+			&:last-child {
+
+				.ivan-button {
+					border-width: 1px;
+					border-left-width: 0px;
+				}
+			}
+		}
+
+		.middle-text {
+			border-width: 1px;
+			line-height: 23px;
+		}
+	}
+
+	// No Borders
+	&.no-borders {
+		.buttons .ivan-button-wrapper {
+			&:first-child {
+
+				.ivan-button {
+					border-width: 0px;
+				}
+			}
+
+			&:last-child {
+
+				.ivan-button {
+					border-width: 0px;
+				}
+			}
+		}
+
+		.middle-text {
+			border-width: 0px;
+		}
+	}
+
+	.middle-text {
+
+		display: block;
+
+		position: absolute;
+		top: 50%;
+		right: 0;
+
+		//margin: -13px -13px 0 0;
+
+		.lh-transform( translate(50%, -50%) );
+
+		height: 26px;
+		width: 26px;
+		line-height: 1;
+
+		text-align: center;
+		
+		background: #fff;
+		color: @gray-normal;
+
+		.lh-box-sizing( content-box );
+
+		.lh-border-radius-simple(100%);
+		font-size: 11px;
+		border: 1px solid @btn-border;
+
+		font-weight: normal;
+		z-index: 12;
+
+		.lh-transition( border-color ease 500ms, background ease 500ms, color ease 500ms);
+
+		.middle-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			.lh-transform( translate(-50%, -50%) );
+
+			line-height: 0.8em;
+		}
+	}
+
+	// Scheme Gray
+	.gray-bg {
+
+		.middle-text {
+			border-color: @gray-light;
+			color: @gray-initial;
+		}
+	}
+
+	// Scheme Dark
+	.dark-bg {
+		.middle-text {
+			border-color: darken(@dark-style, 5%);
+			background: darken(@dark-style, 5%);
+			color: @dark-color;
+		}
+	}
+
+	// Scheme Light
+	.light-bg {
+		.middle-text {
+			border-color: #fff;
+			color: @gray-darken;
+		}
+	}
+
+	// Scheme Primary
+	.primary-bg {
+		.middle-text {
+			border-color: rgba(0, 0, 0, 0.2);
+			background-color: rgba(0, 0, 0, 0.2);
+			color: #fff;
+		}
+	}
+}
+
+/***
+ *
+ * Module > Button
+ *
+***/
+
+.ivan-button-align {
+	&.to-left {
+		text-align: left;
+	}
+	&.to-right {
+		text-align: right;
+	}
+	&.to-center {
+		text-align: center;
+	}
+}
+
+.ivan-button-wrapper {
+
+	display: inline-block;
+
+	&.btn-block {
+		display: block;
+
+		.ivan-button {
+			display: block;
+
+			&.btn-desc {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.ivan-button {
+
+	/* Disable Below Code if you're using Bootstrap buttons*/
+	display: inline-block;
+	margin-bottom: 3px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+
+	.lh-transition( border-color ease 500ms, background ease 500ms, color ease 500ms);
+
+	font-size: @btn-size;
+	font-weight: @btn-weight;
+	line-height: 1.428571429;
+	
+	color: @btn-color;
+	border: @btn-border-width solid @btn-border;
+	background-color: @btn-bg;
+
+	padding: @btn-medium-v-padding 0;
+
+	hr {
+		background-color: @btn-border;
+		border: none;
+		.lh-transition(background ease 150ms);
+	}
+
+	&:hover {
+		background-color: @btn-bg-hover;
+		border-color: @btn-border-hover;
+		color: @btn-color-hover;
+
+		hr {
+			background-color: @primary-color;
+			border: none;
+		}
+	}
+
+	// Outline
+	&.outline {
+		border-width: @btn-border-width;
+		background-color: transparent;
+		color: @btn-color-outline;
+
+		&:hover {
+			border-color: @btn-border-hover;
+			color: @btn-color-outline-hover;
+
+			hr {
+				background-color: @btn-border-hover;
+			}
+		}
+	}
+
+	&.no-border {
+		border-width: 0px;
+		background-color: @gray-clean;
+
+		&:hover {
+			background-color: @btn-bg-hover;
+			border-color: @btn-border-hover;
+		}
+	}
+
+	// Border Radius
+	&.square {
+		.lh-border-radius-simple( 0px );
+	}
+
+	&.round {
+		.lh-border-radius-simple( @btn-radius-round );
+	}
+
+	&.round-square {
+		.lh-border-radius-simple( @btn-radius-round-square );
+	}
+
+	&.circular {
+		.lh-border-radius-simple( 100% );
+
+		padding: 0;
+
+		width: @btn-medium-w;
+		height: @btn-medium-h;
+
+		// add padding in larger sizes...
+
+		.center-holder {
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+
+		.center-inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.icon-simple {
+			display: block;
+			padding: 0 0 5px 0;
+			width: auto;
+		}
+
+		.text-btn {
+			padding: 0;
+			display: block;
+		}
+
+		&.only-icon {
+			padding: 0;
+
+			.icon-simple {
+				padding: 0;
+				font-size: @btn-medium-only-icon;
+			}
+		}
+	}
+
+	// Text
+	.text-btn {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 @btn-medium-h-padding;
+	}
+
+	// Icon
+	.icon-simple {
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		padding: 0 @btn-medium-h-padding-half 0 @btn-medium-h-padding;
+		font-size: @btn-medium-icon;
+		//.lh-transition( color ease 250ms);
+		position: relative;
+		width: 1.5em;
+
+		.lh-box-sizing( content-box );
+
+		&.icon-text {
+			width: auto;
+		}
+	}
+
+	&.icon-before {
+
+		.icon-simple {
+			padding: 0 @btn-medium-h-padding-half 0 @btn-medium-h-padding-third;
+		}
+
+		.text-btn {
+			padding-left: 0px;
+		}
+	}
+
+	&.icon-after {
+
+		.icon-simple {
+			padding: 0 @btn-medium-h-padding-third 0 @btn-medium-h-padding-half;
+		}
+
+		.text-btn {
+			padding-right: 0px;
+		}
+	}
+
+	// Icon Cover Logic...
+	&.icon-cover.with-icon {
+		padding: 0px;
+
+		.icon-simple {
+			display: inline-block;
+			vertical-align: middle;
+			padding: @btn-medium-v-padding @btn-medium-h-padding-cover;
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		&.icon-before {
+			.text-btn {
+				padding-left: @btn-medium-h-padding-cover;
+			}
+		}
+
+		&.icon-after {
+			.text-btn {
+				padding-right: @btn-medium-h-padding-cover;
+			}
+		}
+	}
+
+	// Text Separator
+	&.text-separator.with-icon {
+
+		&.icon-before {
+			.text-btn {
+				border-left: 1px solid rgba(255,255,255,0.25);
+				padding-left: @btn-medium-h-padding-half;
+			}
+		}
+
+		&.icon-after {
+			.text-btn {
+				border-right: 1px solid rgba(255,255,255,0.25);
+				padding-right: @btn-medium-h-padding-half;
+			}
+		}
+	}
+
+	// Icon Glow
+	&.glow-icon .icon-simple i {
+		text-shadow: rgba(255, 255, 255, 0.4) 0px 0px 20px;
+	}
+
+	// Button Zoom
+	&.button-zoom {
+		.lh-transition( all ease 300ms );
+		.lh-transform( scale(1) );
+
+		&:hover {
+			.lh-transform( scale(1.15) );
+		}
+	}
+
+	// Only Icon
+	&.only-icon {
+		.icon-simple {
+			padding-left: @btn-medium-h-padding-only-icon;
+			padding-right: @btn-medium-h-padding-only-icon;
+			line-height: 1;
+		}
+	}
+
+	// Button with Description
+	&.btn-desc {
+		.text-btn-inner {
+			display: block;
+			vertical-align: middle;
+			font-size: @btn-medium-desc-main;
+		}
+
+		.text-desc {
+			display: block;
+			vertical-align: middle;
+			font-size: @btn-medium-desc-inner;
+			font-weight: normal;
+		}
+
+		&.with-icon {
+			.text-btn {
+				text-align: left;
+			}
+		}
+	}
+
+	// Large
+	&.large {
+		font-size: @btn-large-size;
+		padding: @btn-large-v-padding 0;
+
+		&.circular {
+			width: @btn-large-w;
+			height: @btn-large-h;
+
+			&.only-icon {
+				.icon-simple {
+					font-size: @btn-large-only-icon;
+				}
+			}
+		}
+
+		// Text
+		.text-btn {
+			padding: 0 @btn-large-h-padding;
+		}
+
+		// Icon
+		.icon-simple {
+			padding: 0 @btn-large-h-padding-half 0 @btn-large-h-padding;
+			font-size: @btn-large-icon;
+		}
+
+		&.icon-before {
+			.icon-simple {
+				padding: 0 @btn-large-h-padding-half 0 @btn-large-h-padding-third;
+			}
+
+			.text-btn {
+				padding-left: 0px;
+			}
+		}
+
+		&.icon-after {
+			.icon-simple {
+				padding: 0 @btn-large-h-padding-third 0 @btn-large-h-padding-half;
+			}
+
+			.text-btn {
+				padding-right: 0px;
+			}
+		}
+
+		// Icon Cover Logic...
+		&.icon-cover.with-icon {
+			.icon-simple {
+				padding: @btn-large-v-padding @btn-large-h-padding-cover;
+			}
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-large-h-padding-cover;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-large-h-padding-cover;
+				}
+			}
+		}
+
+		// Text Separator
+		&.text-separator.with-icon {
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-large-h-padding-half;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-large-h-padding-half;
+				}
+			}
+		}
+
+		// Only Icon
+		&.only-icon {
+			.icon-simple {
+				padding-left: @btn-large-h-padding-only-icon;
+				padding-right: @btn-large-h-padding-only-icon;
+			}
+		}
+
+		// Button with Description
+		&.btn-desc {
+			.text-btn-inner {
+				font-size: @btn-large-desc-main;
+			}
+
+			.text-desc {
+				font-size: @btn-large-desc-inner;
+			}
+		}
+		
+	} // Large Size End
+
+	// X Large
+	&.x-large {
+		font-size: @btn-x-large-size;
+		padding: @btn-x-large-v-padding 0;
+
+		&.circular {
+			width: @btn-x-large-w;
+			height: @btn-x-large-h;
+
+			&.only-icon {
+				.icon-simple {
+					font-size: @btn-x-large-only-icon;
+				}
+			}
+		}
+
+		// Text
+		.text-btn {
+			padding: 0 @btn-x-large-h-padding;
+		}
+
+		// Icon
+		.icon-simple {
+			padding: 0 @btn-x-large-h-padding-half 0 @btn-x-large-h-padding;
+			font-size: @btn-x-large-icon;
+		}
+
+		&.icon-before {
+			.icon-simple {
+				padding: 0 @btn-x-large-h-padding-half 0 @btn-x-large-h-padding-third;
+			}
+
+			.text-btn {
+				padding-left: 0px;
+			}
+		}
+
+		&.icon-after {
+			.icon-simple {
+				padding: 0 @btn-x-large-h-padding-third 0 @btn-x-large-h-padding-half;
+			}
+
+			.text-btn {
+				padding-right: 0px;
+			}
+		}
+
+		// Icon Cover Logic...
+		&.icon-cover.with-icon {
+			.icon-simple {
+				padding: @btn-x-large-v-padding @btn-x-large-h-padding-cover;
+			}
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-x-large-h-padding-cover;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-x-large-h-padding-cover;
+				}
+			}
+		}
+
+		// Text Separator
+		&.text-separator.with-icon {
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-x-large-h-padding-half;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-x-large-h-padding-half;
+				}
+			}
+		}
+
+		// Only Icon
+		&.only-icon {
+			.icon-simple {
+				padding-left: @btn-x-large-h-padding-only-icon;
+				padding-right: @btn-x-large-h-padding-only-icon;
+			}
+		}
+
+		// Button with Description
+		&.btn-desc {
+			.text-btn-inner {
+				font-size: @btn-x-large-desc-main;
+			}
+
+			.text-desc {
+				font-size: @btn-x-large-desc-inner;
+			}
+		}
+	} // eXtra Large Size End
+
+	// Compact
+	&.compact {
+		font-size: @btn-compact-size;
+		padding: @btn-compact-v-padding 0;
+
+		&.circular {
+			width: @btn-compact-w;
+			height: @btn-compact-h;
+
+			&.only-icon {
+				.icon-simple {
+					font-size: @btn-compact-only-icon;
+				}
+			}
+		}
+
+		// Text
+		.text-btn {
+			padding: 0 @btn-compact-h-padding;
+		}
+
+		// Icon
+		.icon-simple {
+			padding: 0 @btn-compact-h-padding 0 @btn-compact-h-padding;
+			font-size: @btn-compact-icon;
+		}
+
+		&.icon-before {
+			.icon-simple {
+				padding: 0 @btn-compact-h-padding 0 @btn-compact-h-padding;
+			}
+
+			.text-btn {
+				padding-left: 0px;
+			}
+		}
+
+		&.icon-after {
+			.icon-simple {
+				padding: 0 @btn-compact-h-padding 0 @btn-compact-h-padding;
+			}
+
+			.text-btn {
+				padding-right: 0px;
+			}
+		}
+
+		// Icon Cover Logic...
+		&.icon-cover.with-icon {
+			.icon-simple {
+				padding: @btn-compact-v-padding @btn-compact-h-padding-cover;
+			}
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-compact-h-padding-cover;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-compact-h-padding-cover;
+				}
+			}
+		}
+
+		// Text Separator
+		&.text-separator.with-icon {
+
+			&.icon-before {
+				.text-btn {
+					padding-left: @btn-compact-h-padding;
+				}
+			}
+
+			&.icon-after {
+				.text-btn {
+					padding-right: @btn-compact-h-padding;
+				}
+			}
+		}
+
+		// Only Icon
+		&.only-icon {
+			.icon-simple {
+				padding-left: @btn-compact-h-padding-only-icon;
+				padding-right: @btn-compact-h-padding-only-icon;
+			}
+		}
+
+		// Button with Description
+		&.btn-desc {
+			.text-btn-inner {
+				font-size: @btn-compact-desc-main;
+				line-height: 1;
+			}
+
+			.text-desc {
+				font-size: @btn-compact-desc-inner;
+				line-height: 1;
+			}
+		}
+	} // Compact Size End
+
+	// Circular Mega
+	&.circular-mega {
+		&.circular {
+			width: 160px;
+			height: 160px;
+
+			&.only-icon {
+				.icon-simple {
+					font-size: @btn-x-large-only-icon;
+				}
+			}
+
+			.text-btn {
+				padding: 0 10px;
+			}
+
+			hr {
+				height: 1px;
+				width: 20%;
+				margin: 10px auto 10px;
+
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+
+	} // Circular Mega
+
+	// Scheme Gray
+	&.gray-bg {
+
+		background-color: #fff;
+		border-color: @gray-light;
+		color: @gray-soften;
+
+		hr {
+			background-color: @gray-light;
+		}
+
+		&:hover {
+			background-color: #fff;
+			border-color: @gray-soft;
+			color: @gray-initial;
+
+			hr {
+				background-color: @gray-initial;
+			}
+		}
+
+		// Outline
+		&.outline {
+			background-color: transparent;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
+		&.no-border {
+			background-color: @gray-clean;
+
+			&:hover {
+				background-color: @gray-cleaning;
+			}
+		}
+
+		&.with-icon.icon-cover {
+			.icon-simple {
+				color: #fff;
+			}
+		}
+
+		&.text-separator.with-icon .text-btn {
+			border-color: @gray-light;
+		}
+	}
+
+	// Scheme Dark
+	&.dark-bg {
+		background-color: @dark-style;
+		border-color: darken(@dark-style, 5%);
+		color: @dark-color;
+
+		hr {
+			background-color: @dark-color;
+		}
+
+		&:hover {
+			background-color: darken(@dark-style, 5%);
+			border-color: darken(@dark-style, 5%);
+			color: @dark-color;
+
+			hr {
+				background-color: @dark-color;
+			}
+		}
+
+		// Outline
+		&.outline {
+			background-color: transparent;
+			color: darken(@dark-style, 5%);
+
+			hr {
+				background-color: darken(@dark-style, 5%);
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: darken(@dark-style, 5%);
+
+				hr {
+					background-color: darken(@dark-style, 5%);
+				}
+			}
+
+			&.text-separator.with-icon .text-btn {
+				border-color: lighten(@dark-style, 10%);
+			}
+
+			&.icon-cover.with-icon .icon-simple {
+				background-color: darken(@dark-style, 5%);
+			}
+		}
+
+		&.with-icon.icon-cover {
+			.icon-simple {
+				color: @dark-color;
+			}
+		}
+	}
+
+	// Scheme Light
+	&.light-bg {
+		background-color: #fff;
+		border-color: #fff;
+		color: @gray-normal;
+
+		hr {
+			background-color: @gray-normal;
+		}
+
+		&:hover {
+			background-color: #fff;
+			border-color: #fff;
+			color: @gray-darken;
+
+			hr {
+				background-color: @gray-darken;
+			}
+		}
+
+		// Outline
+		&.outline {
+			background-color: transparent;
+			color: #fff;
+			border-color: #fff;
+
+			hr {
+				background-color: #fff;
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: #fff;
+				border-color: #fff;
+
+				hr {
+					background-color: #fff;
+				}
+			}
+
+			&.text-separator.with-icon .text-btn {
+				border-color: #fff;
+			}
+
+			&.with-icon.icon-cover {
+				.icon-simple {
+					background-color: transparent;
+					color: #fff;
+				}
+
+				&:hover {
+					.icon-simple {
+						color: #fff;
+					}
+				}
+			}
+
+			&.dark-op {
+				background-color: rgba(0, 0, 0, 0.2);
+
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+			}
+		}
+
+		&.with-icon.icon-cover {
+			.icon-simple {
+				color: @gray-normal;
+			}
+
+			&:hover {
+				.icon-simple {
+					color: @gray-darken;
+				}
+			}
+		}
+
+		&.icon-cover.with-icon .icon-simple {
+			background-color: @gray-clean;
+		}
+
+		&.text-separator.with-icon .text-btn {
+			border-color: @gray-clean;
+		}
+	}
+
+	// Scheme Primary
+	&.primary-bg {
+		background-color: @primary;
+		border-color: @primary;
+		color: @primary-color;
+
+		hr {
+			background-color: @primary-color;
+		}
+
+		&:hover {
+			background-color: darken(@primary, 5%);
+			border-color: darken(@primary, 5%);
+			color: @primary-color;
+
+			hr {
+				background-color: @primary-color;
+			}
+		}
+
+		// Outline
+		&.outline {
+			background-color: transparent;
+			color: darken(@primary, 5%);
+
+			hr {
+				background-color: darken(@primary, 5%);
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: darken(@primary, 5%);
+
+				hr {
+					background-color: darken(@primary, 5%);
+				}
+			}
+
+			&.text-separator.with-icon .text-btn {
+				border-color:@primary;
+			}
+
+			&.icon-cover.with-icon .icon-simple {
+				background-color: darken(@primary, 5%);
+			}
+		}
+
+		&.with-icon.icon-cover {
+			.icon-simple {
+				color: @primary-color;
+			}
+		}
+	} // primary-bg end
+
+	// Social Auto Colors...
+		&.sa-facebook, &.sa-facebook-square { .iv_btn_social_auto( @facebook ); }
+
+		&.sa-twitter, &.sa-twitter-square { .iv_btn_social_auto( @twitter ); }
+
+		&.sa-pinterest, &.sa-pinterest-square { .iv_btn_social_auto( @pinterest ); }
+
+		&.sa-linkedin, &.sa-linkedin-square, &.sa-envelope { .iv_btn_social_auto( @linkedin ); }
+
+		&.sa-youtube, &.sa-youtube-square, &.sa-youtube-play  { .iv_btn_social_auto( @youtube ); }
+
+		&.sa-instagram { .iv_btn_social_auto( @instagram ); }
+		&.sa-flickr { .iv_btn_social_auto( @flickr ); }
+		&.sa-tumblr, &.sa-tumblr-square { .iv_btn_social_auto( @tumblr ); }
+
+		&.sa-vk { .iv_btn_social_auto( @vk ); }
+		&.sa-vimeo-square { .iv_btn_social_auto( @vimeo-green ); }
+
+		&.sa-google, &.sa-google-plus, &.sa-google-plus-square { .iv_btn_social_auto( @google-plus ); }
+
+		&.sa-foursquare { .iv_btn_social_auto( @foursquare ); }
+		&.sa-yahoo { .iv_btn_social_auto( @yahoo ); }
+		&.sa-dribbble { .iv_btn_social_auto( @dribbble ); }
+		&.sa-wordpress { .iv_btn_social_auto( @wordpress ); }
+		&.sa-stumbleupon, &.sa-stumbleupon-circle { .iv_btn_social_auto( @stumbleupon ); }
+		&.sa-soundcloud { .iv_btn_social_auto( @soundcloud ); }
+		&.sa-skype { .iv_btn_social_auto( @skype ); }
+		&.sa-vine { .iv_btn_social_auto( @vine ); }
+		&.sa-xing, &.sa-xing-square { .iv_btn_social_auto( @xing ); }
+		&.sa-weibo { .iv_btn_social_auto( @weibo ); }
+		&.sa-tencent-weibo { .iv_btn_social_auto( @tencent ); }
+		&.sa-twitch { .iv_btn_social_auto( @twitch ); }
+		&.sa-renren { .iv_btn_social_auto( @renren ); }
+		&.sa-git, &.sa-git-square, &.sa-github, &.sa-github-alt, &.sa-github-square, 
+		&.sa-bitbucket, &.sa-bitbucket-square, &.sa-behance, &.sa-behance-square { .iv_btn_social_auto( @git ); }
+
+}
