@@ -2,7 +2,7 @@
 
 .receitas-title {
 	font-family: 'DaftBrush';
-    font-size: 35px;
+    font-size: 60px;
     color: #233C74;
     text-align: center;
     margin: 0;
@@ -36,17 +36,19 @@
 }
 .product_categories-title {
 	font-family: 'Lato';
-    font-size: 22px;
+    /*font-size: 22px;*/
 	color: #3c3c3a;
     line-height: 1;
     text-align: center;	
+    font-size: 20px;
+    font-weight: 500;    
 }
 .receitas-layout-content {
 
 }
 .projects_cats_filter-result-title {
 	font-family: 'Lato';
-    font-size: 22px;
+    font-size: 20px;
     color: #3c3c3a;
     margin-bottom: 35px;
    /* font-weight: bold;*/
@@ -111,7 +113,7 @@
 }
 .ivan_vc_projects_receitas_tags_wrap {
 	display: flex;
-	margin-top: 30px;
+	margin-top: 20px;
     flex-wrap: wrap;
     margin-bottom: 70px;
 }
@@ -121,7 +123,7 @@
 }
 .product_tags-el {
 	    font-family: 'Lato';
-    font-size: 22px;
+    font-size: 17px;
     color: #3c3c3a;
     padding-left: 10px;
     line-height: 1;
@@ -195,14 +197,18 @@
     border: 2px solid #223872 !important;
 }
 #ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input {
-    font-size: 14px !important;
+    font-size: 18px !important;
 }
 #ajaxsearchlite1 .probox, div.asl_w .probox {
     height: 47px !important;
 }
 div.asl_m .probox .proinput {
     padding: 8px !important; 
+    margin-top: 2px !important;
     /*margin-top: 10px !important;*/
+}
+div.asl_m .probox div.asl_loader {
+        margin-top: 4px !important;
 }
 div.asl_w .probox .promagnifier {
 	width: 65px !important;

@@ -60,9 +60,13 @@ get_header(); ?>
 								$arg = array(
 									'taxonomy' => array( 'receitas_tags' ), 
 									'hide_empty' => false,
+									//'orderby' => 'rand',
+    								//'number' => 3	
 								);
-								$terms = get_terms( $arg );	
-								foreach( $terms as $key => $term ) { ?>
+								$terms = get_terms( $arg );
+								shuffle( $terms );
+								$random_terms = array_slice( $terms, 0, 3 );	
+								foreach( $random_terms as $key => $term ) { ?>
 										<div class="product_tags-el product_tags-ell product_tags-<?php echo $term->term_id; ?>" data-termid="<?php echo $term->term_id; ?>" data-termname="<?php echo $term->name; ?>" data-tax="receitas_tags">
 											<div class="product_tags-title">
 												<?php echo $term->name; ?>
