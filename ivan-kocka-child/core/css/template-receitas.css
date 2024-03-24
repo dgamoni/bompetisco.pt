@@ -1,0 +1,232 @@
+
+
+.receitas-title {
+	font-family: 'DaftBrush';
+    font-size: 35px;
+    color: #233C74;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+} 
+
+.page-template-template-receitas .ivan-projects .ivan-project-thumb-wrapper {
+    padding-bottom: 0px;
+}
+.page-template-template-receitas .ivan-projects .ivan-project-inner {
+    margin-bottom: 62px;
+}
+.product_category-el img {
+	width: 144px;
+	height: 144px;
+}
+.ivan_vc_projects_cats_wrap {
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*align-items: center;*/
+    margin-bottom: 100px;
+}
+.product_category-el {
+	width: 100px;
+
+}
+.product_category-el:hover {
+	cursor: pointer;
+}
+.product_categories-title {
+	font-family: 'Lato';
+    font-size: 22px;
+	color: #3c3c3a;
+    line-height: 1;
+    text-align: center;	
+}
+.receitas-layout-content {
+
+}
+.projects_cats_filter-result-title {
+	font-family: 'Lato';
+    font-size: 22px;
+    color: #3c3c3a;
+    margin-bottom: 35px;
+   /* font-weight: bold;*/
+    display: none;
+}
+.resultado-title {
+	font-weight: bold;
+}
+.resultado span.resultado-el {
+    margin-right: 5px;
+    background-color: #fef200;
+    padding: 0px 8px;
+    line-height: 1; 
+    position: relative;
+    padding-right: 16px;   
+}
+.resultado-el:after {
+	content: 'x';
+    font-size: 13px;
+    right: 3px;
+    position: absolute;
+    top: 0px;
+    font-weight: bold;
+}
+.resultado-el:hover:after {
+	cursor: pointer;
+}
+
+.ivan_vc_projects_tags_wrap {
+	max-width: 600px;
+    margin: 0 auto;
+}
+#cats_filter-search {
+	position: relative;
+}
+#cats_filter-search input[type=search].search-field {
+	border: 2px solid #223872;
+}
+#cats_filter-search input[type=search].search-field::placeholder {
+  color: #223872;
+}
+#cats_filter-search .search-submit {
+	position: absolute;
+    background-color: #223872;
+	color: white;
+    border: 2px solid #223872;	
+    right: 0;
+}
+.reset_filters {
+    position: absolute;
+    color: #223872;
+    text-transform: uppercase;
+    right: 28px;
+    font-size: 13px;
+}
+.reset_filters:after {
+	content: 'x';
+	margin-left: 10px;
+}
+.reset_filters:hover {
+	cursor: pointer;
+}
+.ivan_vc_projects_receitas_tags_wrap {
+	display: flex;
+	margin-top: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+.product_tags-el.product_tags-el_sugest {
+	font-weight: bold;
+	padding-left: 0;
+}
+.product_tags-el {
+	    font-family: 'Lato';
+    font-size: 22px;
+    color: #3c3c3a;
+    padding-left: 10px;
+    line-height: 1;
+    position: relative;
+    padding-right: 15px;    
+}
+.product_tags-el:after {
+	content: '|';
+	position: absolute;
+	right: 0;
+    top: 0;	
+}
+.product_tags-el.product_tags-el_sugest:after {
+	content: '';
+}
+.product_tags-el:last-child:after {
+	content: '';
+}
+.product_tags-ell:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.receitas-layout.content-wrapper {
+	    padding: 45px 20px;
+	}
+	.ivan_vc_projects_tags_wrap {
+	   /* max-width: 370px;*/
+	}	
+	.ivan_vc_projects_receitas_tags_wrap {
+	    flex-direction: column;
+	}
+	.product_tags-el {
+	    padding-left: 0;
+	    line-height: 1.5;
+	}	
+	.product_tags-el:after	{
+		content: '';
+	}
+}
+@media (max-width: 480px) { 
+	.ivan_vc_projects_tags_wrap {
+	    /*max-width: 270px;*/
+	    margin: 0;
+	}
+}
+
+.projects_cats_filter-result {
+	width: 100%;
+}
+.resultado span.resultado-el.el-tags {
+	background-color: #ffffff;
+}
+.content_none {
+	font-size: 26px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*ajax search style*/
+#cats_filter-search {
+	display: none;
+}
+.ajax_search_wrap {
+	position: relative;
+}
+#ajaxsearchlite1 .probox, div.asl_w .probox {
+    border: 2px solid #223872 !important;
+}
+#ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input {
+    font-size: 14px !important;
+}
+#ajaxsearchlite1 .probox, div.asl_w .probox {
+    height: 47px !important;
+}
+div.asl_m .probox .proinput {
+    padding: 8px !important; 
+    /*margin-top: 10px !important;*/
+}
+div.asl_w .probox .promagnifier {
+	width: 65px !important;
+    height: 47px !important;
+    background-color: #223872 !important;
+    box-shadow: none !important;
+}
+div.asl_w .probox .promagnifier .innericon svg {
+    fill: #fffefe !important;
+}
+/*div.asl_w .probox .proloading, */
+div.asl_w .probox .proclose 
+/*div.asl_w .probox .promagnifier, */
+/*div.asl_w .probox .prosettings*/ {
+    width: 40px !important;
+    height: 47px !important;
+}
+div.asl_w .probox .proloading {
+	width: 38px !important;
+    height: 38px !important;
+}
+
+
+.ivan-projects .thumbnail img {
+    /*min-height: 370px;*/
+   /* object-fit: cover;*/
+}

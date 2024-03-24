@@ -1,4 +1,7 @@
 
+.home_banner_mobile {
+	display: none;
+}
 
 @media (max-width: 1200px) {
 
@@ -9,10 +12,18 @@
 }
 
 @media (max-width: 768px) {
-
+	.home_banner_desktop {
+		display: none;
+	}
+	.home_banner_mobile.ivan-image-block {
+		display: block;
+		background-size: contain;
+	}
 }
 
 @media (max-width: 480px) {
-
+	.home_banner_mobile.ivan-image-block {
+		height: 450px !important;
+	}
 }
 
