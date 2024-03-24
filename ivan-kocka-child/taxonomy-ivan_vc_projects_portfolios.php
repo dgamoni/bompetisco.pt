@@ -94,6 +94,7 @@ get_header(); ?>
 							);
 						
 						$the_query = new WP_Query( $args );
+						//var_dump(get_queried_object()->term_id);
 
 						while ( $the_query->have_posts() ) : $the_query->the_post();
 						setup_postdata( $post );
@@ -113,15 +114,17 @@ get_header(); ?>
 					<?php echo $image; ?>
 					<span class="ivan-hover-fx"></span>
 				</a>
-			</div>
-			<div class="entry category_name_wrap">
-				<div class="entry-inner">
-					<div class="centered">
-						<h3><a href="<?php echo get_permalink( $post->ID); ?>"><?php echo get_the_title($post->ID ); ?></a></h3>
-						<!-- <div class="ivan-vc-separator small left"></div>  -->
+			<!-- </div> -->
+				<div class="entry category_name_wrap">
+					<div class="entry-inner">
+						<div class="centered">
+							<h3><a href="<?php echo get_permalink( $post->ID); ?>"><?php echo get_the_title($post->ID ); ?></a></h3>
+							<!-- <div class="ivan-vc-separator small left"></div>  -->
+						</div>
 					</div>
 				</div>
-			</div>
+				
+			</div>	
 								</div>
 
 		<div></div>
