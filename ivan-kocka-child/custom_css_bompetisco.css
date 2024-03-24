@@ -1,3 +1,32 @@
+@font-face {
+    font-family: 'DaftBrush';
+    src: url('DaftBrush.eot');
+    src: url('DaftBrush.eot?#iefix') format('embedded-opentype'),
+        url('DaftBrush.woff2') format('woff2'),
+        url('DaftBrush.woff') format('woff'),
+        url('DaftBrush.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.receitas-titulo {
+	font-family: 'DaftBrush';
+	font-size: 2.5em;
+	color: #233C74;
+	text-align: center;
+	margin: 0;
+}
+.receitas-subtitulo {
+	font-family: 'DaftBrush';
+	font-size: 1.5em;
+	color: #233C74;
+	margin: 0;
+}
+.receitas-texto {
+	color: #233C74;
+}
+
+
 .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.current-menu-ancestor>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.current-menu-item>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.highlight_style>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li.highlight_style>.item_link:hover, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li:hover>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link span.description_text, .iv-layout.header.dark .mega_main_menu .mega_main_menu_ul>li>.item_link:hover{
 font-weight: 600;
 font-size: medium;    
@@ -49,3 +78,52 @@ a.jm-post-like{
 .ivan-vc-filters .filter-grid{
   display: none;
 }
+.simple-right-menu .mega_main_menu .mega_main_menu_ul {
+    height: 100%!important;
+}
+
+/* footer icons */
+.footer-tel {
+	color: #223872;
+	background-image: url('https://bompetisco.pt/wp-content/uploads/2018/11/footer-tel.svg');
+	width: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.footer-email a {
+color: #223872!important;
+}
+.footer-email {
+	color: #223872!important;
+	background-image: url('https://bompetisco.pt/wp-content/uploads/2018/11/footer-email.svg');
+	width: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.footer-insta {
+	color: #223872!important;
+	background-image: url('https://bompetisco.pt/wp-content/uploads/2018/11/footer-insta.svg');
+	width: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.footer-like {
+	color: #223872!important;
+	background-image: url('https://bompetisco.pt/wp-content/uploads/2018/11/footer-like.svg');
+	width: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.footer-location {
+	color: #223872!important;
+	background-image: url('https://bompetisco.pt/wp-content/uploads/2018/11/footer-location.svg');
+	width: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.iv-layout.footer a:hover { color: #223872!important; transition: none!important;}

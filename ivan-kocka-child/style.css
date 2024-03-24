@@ -16,3 +16,19 @@ Use this theme to make a good looking and polished website with minimal effort.
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+.ivan-projects .entry.category_name_wrap {
+	    position: absolute;
+    bottom: 0;
+    width: 100%;
+        background-color: #d6dfe4;
+}
+.cat_flex_wrap {
+	    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.tax-ivan_vc_projects_portfolios .blog-large.style-simple .entry-inner {
+    padding: 20px 15px 22px;
+}
